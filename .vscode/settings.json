@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.tex": "latex",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}

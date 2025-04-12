@@ -1,0 +1,3 @@
+/Users/andrea/Documents/progC/Esercitazione_4_C_Array/Exercise2/build/CMakeFiles/rateOfReturn.dir
+/Users/andrea/Documents/progC/Esercitazione_4_C_Array/Exercise2/build/CMakeFiles/edit_cache.dir
+/Users/andrea/Documents/progC/Esercitazione_4_C_Array/Exercise2/build/CMakeFiles/rebuild_cache.dir
