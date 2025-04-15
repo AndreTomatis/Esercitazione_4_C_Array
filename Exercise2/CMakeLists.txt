@@ -18,28 +18,24 @@ endif (WIN32)
 # Add dependencies
 ################################################################################
 
-## Eigen3
-find_package(Eigen3 CONFIG REQUIRED)
-list(APPEND ${rateOfReturn_LINKED_LIBRARIES} PUBLIC Eigen3::Eigen)
+
 
 ## Threads
 find_package(Threads REQUIRED)
 list(APPEND ${rateOfReturn_LINKED_LIBRARIES} PRIVATE Threads::Threads)
+# Insert Sources
+################################################################################
+add_subdirectory(src)
 
-## GTest
-find_package(GTest REQUIRED)
-
-list(APPEND rateOfReturn_LINKED_LIBRARIES PRIVATE GTest::gtest)
-list(APPEND rateOfReturn_LINKED_LIBRARIES PRIVATE GTest::gtest_main)
-list(APPEND rateOfReturn_LINKED_LIBRARIES PRIVATE GTest::gmock)
-list(APPEND rateOfReturn_LINKED_LIBRARIES PRIVATE GTest::gmock_main)
-
-
+list(APPEND rateOfReturn_SOURCES ${rateOfReturn_sources})
+list(APPEND rateOfReturn_HEADERS ${rateOfReturn_headers})
+list(APPEND rateOfReturn_INCLUDE ${rateOfReturn_includes})
 
 # Create executable
 ################################################################################
 add_executable(${PROJECT_NAME}
-      main.cpp
+      main.cpp src/Utils.cpp
+
       ${rateOfReturn_SOURCES}
       ${rateOfReturn_HEADERS})
 
